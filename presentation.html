@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Thierry - Présentation</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .presentation-card {
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+      padding: 2.5rem;
+      max-width: 780px;
+      margin: 2rem auto;
+      animation: fadeInUp 1.2s ease-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .avatar-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 2rem;
+    }
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid white;
+      box-shadow: 0 10px 35px rgba(99,102,241,0.35);
+      transition: all 0.4s ease;
+    }
+
+    .avatar:hover {
+      transform: scale(1.08) rotate(3deg);
+    }
+
+    .avatar-ring {
+      position: absolute;
+      inset: -16px;
+      border-radius: 50%;
+      border: 4px solid #6366f1;
+      animation: pulseRing 4s infinite ease-in-out;
+      opacity: 0.5;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      color: #1e293b;
+      margin-bottom: 1.2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .intro-text {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: #475569;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+      margin: 2rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .sections {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .section {
+      background: #f8fafc;
+      padding: 1.8rem;
+      border-radius: 1.2rem;
+      border: 1px solid #e2e8f0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .section h3 {
+      font-size: 1.45rem;
+      color: #6366f1;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .section li {
+      margin: 0.9rem 0;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+    }
+
+    .section i {
+      color: #6366f1;
+      font-size: 1.4rem;
+      margin-top: 0.2rem;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulseRing {
+      0%   { transform: scale(1); opacity: 0.6; }
+      50%  { transform: scale(1.18); opacity: 0.3; }
+      100% { transform: scale(1); opacity: 0.6; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sapota</h1>
+    <div id="timer">00:00</div>
+  </header>
+
+  <nav>
+    <div class="step completed">1. Inscription</div>
+    <div class="step active">2. Présentation</div>
+    <div class="step">3. Questions</div>
+    <div class="step">4. Commentaire</div>
+  </nav>
+
+  <main>
+    <div class="presentation-card">
+      <div class="avatar-container">
+        <div class="avatar-ring"></div>
+        <img src="WhatsApp Image 2026-02-26 at 09.14.14.jpeg" alt="Thierry Niyomukiza" class="avatar">
+      </div>
+
+      <h2>Bonjour, je suis Thierry NIYOMUKIZA !</h2>
+
+      <p class="intro-text">
+        Jeune Burundais passionné, curieux et motivé par les nouvelles technologies.  
+        Étudiant en génie informatique, je suis toujours prêt à apprendre et à relever des défis.
+      </p>
+
+      <div class="sections">
+        <div class="section">
+          <h3><i class="fas fa-user"></i> À propos de moi</h3>
+          <ul>
+            <li><strong>Nationalité :</strong> Burundaise</li>
+            <li><strong>Ville :</strong> Bujumbura</li>
+            <li><strong>Adresse :</strong> Mutanga Nord</li>
+            <li><strong>Âge :</strong> Moins de 35 ans</li>
+            <li><strong>Métier / Statut :</strong> Étudiant en Génie Informatique</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3><i class="fas fa-brain"></i> Mes compétences</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Développement web : HTML, CSS, JavaScript</li>
+            <li><i class="fas fa-check-circle"></i> Programmation : C, C++, Java</li>
+            <li><i class="fas fa-check-circle"></i> Bases de données (notions)</li>
+            <li><i class="fas fa-check-circle"></i> Pack Office : Word, Excel, PowerPoint (niveau intermédiaire)</li>
+            <li><i class="fas fa-check-circle"></i> Navigation internet avancée & utilisation des IA</li>
+            <li><i class="fas fa-check-circle"></i> Résolution de problèmes & créativité</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3><i class="fas fa-certificate"></i> Mes diplômes & certificats</h3>
+          <ul>
+            <li><i class="fas fa-graduation-cap"></i> Diplôme d’État de fin des études post-fondamentales – Lycée d’Excellence de Makamba</li>
+            <li><i class="fas fa-certificate"></i> Certificat de fin des études post-fondamentales</li>
+            <li><i class="fas fa-certificate"></i> Certificat Highlife en Excel, Word et PowerPoint</li>
+            <li><i class="fas fa-university"></i> Étudiant en cours – Institut de Technologie Numérique, Université du Burundi</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3><i class="fas fa-phone-alt"></i> Me contacter</h3>
+          <ul>
+            <li><i class="fab fa-whatsapp"></i> WhatsApp : +257 6678 4003</li>
+            <li><i class="fas fa-envelope"></i> Email : thierryniyomukiza77y@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="buttons-container">
+        <a href="index.html" class="btn secondary">← Retour</a>
+        <a href="question.html" class="btn primary">Continuer vers le quiz →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © <a href="mailto:thierryniyomukiza77@gmail.com">thierryniyomukiza77@gmail.com</a> 
+    - Technologies numériques au service du pays
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

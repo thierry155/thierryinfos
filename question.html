@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Thierry - Technologies numériques au Burundi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sapota</h1>
+    <div id="timer">00:00</div>
+  </header>
+
+  <nav>
+    <div class="step completed">1. Inscription</div>
+    <div class="step completed">2. Présentation</div>
+    <div class="step active">3. Questions</div>
+    <div class="step">4. Commentaire</div>
+  </nav>
+
+  <main>
+    <h2>Technologies numériques au service du Burundi ! (10 questions)</h2>
+    
+    <form id="quiz-form"></form>
+
+    <div id="result-zone" style="display:none; margin:2rem 0; padding:1.5rem; background:#f8fafc; border-radius:12px;">
+      <h3 id="score-title"></h3>
+      <div id="corrections-detail"></div>
+    </div>
+
+    <div id="buttons-zone" class="buttons-container">
+      <a href="presentation.html" class="btn secondary">← Retour</a>
+      <button type="button" onclick="showScoreAndCorrections()" class="btn primary">Voir mon score →</button>
+    </div>
+  </main>
+
+  <footer>
+    © <a href="mailto:thierryniyomukiza77@gmail.com">thierryniyomukiza77@gmail.com</a> 
+    - Technologies numériques au service du pays
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

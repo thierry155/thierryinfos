@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Thierry - Commentaire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sapota</h1>
+    <div id="timer">00:00</div>
+  </header>
+
+  <nav>
+    <div class="step completed">1. Inscription</div>
+    <div class="step completed">2. Présentation</div>
+    <div class="step completed">3. Questions</div>
+    <div class="step active">4. Commentaire</div>
+  </nav>
+
+  <main>
+    <h2>Dernière étape : ton avis</h2>
+    <p>Partage ton commentaire ou ton message (obligatoire)</p>
+    
+    <textarea id="commentaire" rows="8" placeholder="Écris ton commentaire ici..."></textarea>
+
+    <div class="buttons-container">
+      <a href="question.html" class="btn secondary">← Retour</a>
+      <button onclick="submitAndGoToMerci()" class="btn primary">Envoyer tout !</button>
+    </div>
+  </main>
+
+  <footer>
+    © <a href="mailto:thierryniyomukiza77@gmail.com">thierryniyomukiza77@gmail.com</a> 
+    - Technologies numériques au service du pays
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

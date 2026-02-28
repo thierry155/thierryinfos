@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Thierry - Se connecter</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Animation titre avec lettres qui changent de couleur */
+    .animated-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+
+    .animated-title span {
+      display: inline-block;
+      animation: colorChange 6s infinite alternate;
+    }
+
+    .animated-title span:nth-child(1) { animation-delay: 0s; }
+    .animated-title span:nth-child(2) { animation-delay: 0.4s; }
+    .animated-title span:nth-child(3) { animation-delay: 0.8s; }
+    .animated-title span:nth-child(4) { animation-delay: 1.2s; }
+    .animated-title span:nth-child(5) { animation-delay: 1.6s; }
+    .animated-title span:nth-child(6) { animation-delay: 2s; }
+    .animated-title span:nth-child(7) { animation-delay: 2.4s; }
+    .animated-title span:nth-child(8) { animation-delay: 2.8s; }
+    .animated-title span:nth-child(9) { animation-delay: 3.2s; }
+    .animated-title span:nth-child(10) { animation-delay: 3.6s; }
+
+    @keyframes colorChange {
+      0%   { color: #ff6b6b; transform: scale(1); }
+      25%  { color: #4ecdc4; transform: scale(1.1); }
+      50%  { color: #45b7d1; transform: scale(1); }
+      75%  { color: #feca57; transform: scale(1.1); }
+      100% { color: #ff9ff3; transform: scale(1); }
+    }
+
+    /* "Bienvenu" positionné à gauche – animation RAPIDE */
+    .bienvenu {
+      position: absolute;
+      top: 15%;
+      left: 5%;
+      font-size: 5rem;
+      font-weight: bold;
+      color: #6366f1;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -1;
+      animation: floatBienvenu 6s infinite ease-in-out, colorBienvenu 4s infinite alternate;
+      transform-origin: left center;
+    }
+
+    @keyframes floatBienvenu {
+      0%   { transform: translateY(0) rotate(0deg); }
+      25%  { transform: translateY(-40px) rotate(5deg); }
+      50%  { transform: translateY(0) rotate(0deg); }
+      75%  { transform: translateY(40px) rotate(-5deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+
+    @keyframes colorBienvenu {
+      0%   { color: #ff6b6b; }
+      25%  { color: #4ecdc4; }
+      50%  { color: #45b7d1; }
+      75%  { color: #feca57; }
+      100% { color: #ff9ff3; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- "Bienvenu" animé en haut à gauche (rapide) -->
+  <div class="bienvenu">Bienvenu</div>
+
+  <header>
+    <h1>Sapota</h1>
+    <div id="timer">00:00</div>
+  </header>
+
+  <nav>
+    <div class="step active">1. Inscription</div>
+    <div class="step">2. Présentation</div>
+    <div class="step">3. Questions</div>
+    <div class="step">4. Commentaire</div>
+  </nav>
+
+  <main>
+    <!-- Titre "Se connecter" avec animation lettres colorées -->
+    <h2 class="animated-title">
+      <span>S</span><span>e</span>
+      <span>&nbsp;</span>
+      <span>c</span><span>o</span><span>n</span><span>n</span><span>e</span><span>c</span><span>t</span><span>e</span><span>r</span>
+    </h2>
+    
+    <form id="form-accueil">
+      <input type="text"    id="nom"     placeholder="Nom *" required>
+      <input type="text"    id="prenom"  placeholder="Prénom *" required>
+      <input type="email"   id="email"   placeholder="Email *" required>
+
+      <div class="password-section">
+        <button type="button" id="btn-generate-password" class="btn primary">
+          Créer mot de passe
+        </button>
+
+        <div id="password-message" class="password-result"></div>
+        
+        <!-- Champ caché pour stocker le mot de passe -->
+        <input type="hidden" id="password" name="password" required>
+      </div>
+
+      <div class="buttons-container">
+        <button type="submit" class="btn primary">Suivant →</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    © <a href="mailto:thierryniyomukiza77@gmail.com">thierryniyomukiza77@gmail.com</a> 
+    - Technologies numériques au service du pays
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
